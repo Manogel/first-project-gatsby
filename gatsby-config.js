@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `First project`,
     description: `First project made in gatsbyjs.`,
+    position: `Fullstack developer.`,
     author: `@manogel`,
   },
   plugins: [
