@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import Avatar from "../Avatar"
 
 // import { Container } from './styles';
 
@@ -32,6 +33,7 @@ const Profile: React.FC = () => {
 
   return (
     <div className="profile-wrapper">
+      <Avatar />
       <h1>{title}</h1>
       <h2>{position}</h2>
       <p>{author}</p>
