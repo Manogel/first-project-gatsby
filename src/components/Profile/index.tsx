@@ -2,7 +2,13 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Avatar from "../Avatar"
 
-// import { Container } from './styles';
+import {
+  Container,
+  ProfileLink,
+  ProfileAuthor,
+  ProfileDescription,
+  ProfilePosition,
+} from "./styles"
 
 interface IQuery {
   site: {
@@ -32,12 +38,14 @@ const Profile: React.FC = () => {
   const { author, position, title } = data.site.siteMetadata
 
   return (
-    <div className="profile-wrapper">
-      <Avatar />
-      <h1>{title}</h1>
-      <h2>{position}</h2>
-      <p>{author}</p>
-    </div>
+    <Container>
+      <ProfileLink>
+        <Avatar />
+        <ProfileAuthor>{title}</ProfileAuthor>
+        <ProfilePosition>{position}</ProfilePosition>
+      </ProfileLink>
+      <ProfileDescription>{author}</ProfileDescription>
+    </Container>
   )
 }
 
