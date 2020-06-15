@@ -41,8 +41,10 @@ const Profile: React.FC = () => {
     <Container>
       <ProfileLink>
         <Avatar />
-        <ProfileAuthor>{title}</ProfileAuthor>
-        <ProfilePosition>{position}</ProfilePosition>
+        <ProfileAuthor>
+          {title}
+          <ProfilePosition>{position}</ProfilePosition>
+        </ProfileAuthor>
       </ProfileLink>
       <ProfileDescription>{author}</ProfileDescription>
     </Container>
