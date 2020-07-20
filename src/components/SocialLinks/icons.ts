@@ -1,11 +1,10 @@
-import React from "react"
 import {
   Github,
   Twitter,
   Youtube,
   Unsplash,
   Instagram,
-} from "styled-icons/boxicons-logos/index"
+} from 'styled-icons/boxicons-logos/index';
 
 const Icons = {
   Github,
@@ -13,6 +12,6 @@ const Icons = {
   Youtube,
   Unsplash,
   Instagram,
-}
+};
 
-export default Icons
+export default Icons;

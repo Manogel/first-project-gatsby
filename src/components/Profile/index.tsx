@@ -1,6 +1,6 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Avatar from "../Avatar"
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Avatar from '../Avatar';
 
 import {
   Container,
@@ -8,17 +8,17 @@ import {
   ProfileAuthor,
   ProfileDescription,
   ProfilePosition,
-} from "./styles"
+} from './styles';
 
 interface IQuery {
   site: {
     siteMetadata: {
-      title: string
-      description: string
-      position: string
-      author: string
-    }
-  }
+      title: string;
+      description: string;
+      position: string;
+      author: string;
+    };
+  };
 }
 
 const Profile: React.FC = () => {
@@ -33,9 +33,9 @@ const Profile: React.FC = () => {
         }
       }
     }
-  `)
+  `);
 
-  const { author, position, title } = data.site.siteMetadata
+  const { author, position, title } = data.site.siteMetadata;
 
   return (
     <Container>
@@ -48,7 +48,7 @@ const Profile: React.FC = () => {
       </ProfileLink>
       <ProfileDescription>{author}</ProfileDescription>
     </Container>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

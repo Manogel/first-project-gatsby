@@ -1,6 +1,6 @@
-import React from "react"
-import links from "./content"
-import * as S from "./styles"
+import React from 'react';
+import links from './content';
+import * as S from './styles';
 
 const MenuLinks: React.FC = () => {
   return (
@@ -15,7 +15,7 @@ const MenuLinks: React.FC = () => {
         ))}
       </S.MenuLinksList>
     </S.Container>
-  )
-}
+  );
+};
 
-export default MenuLinks
+export default MenuLinks;
