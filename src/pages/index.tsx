@@ -1,28 +1,22 @@
-import React from "react"
-import { PageProps, Link } from "gatsby"
+import React from 'react';
+import { PageProps } from 'gatsby';
 
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import Layout from '../components/Layout';
+import SEO from '../components/seo';
+import PostItem from '../components/PostItem';
 
-const IndexPage: React.FC<PageProps> = props => (
+const IndexPage: React.FC<PageProps> = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi people</h1>
-    <ul>
-      <li>
-        <a href="/about">About</a>
-      </li>
-      <li>
-        <Link to="/" activeStyle={{ color: "red" }}>
-          Home
-        </Link>
-      </li>
-      <li>
-        <Link to="/about">About Link</Link>
-      </li>
-    </ul>
-    <h1>{props.path}</h1>
+    <PostItem
+      slug="/about/"
+      category="Misc"
+      date="30 de Julho de 2019"
+      timeToRead="5"
+      title="Diga não ao Medium: tenha sua própria plataforma"
+      description="Algumas razões para você ter sua própria plataforma ao invés de soluções como o Medium."
+    />
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
