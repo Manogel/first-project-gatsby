@@ -5,6 +5,7 @@ import Layout from '../../components/Layout';
 import SEO from '../../components/seo';
 
 import * as S from '../../components/Post/styles';
+import RecommendedPosts from '../../components/RecommendedPosts';
 
 interface IBlogPostProps {
   data: {
@@ -20,10 +21,30 @@ interface IBlogPostProps {
       html: string;
     };
   };
+  pageContext: {
+    nextPost?: {
+      fields: {
+        slug: string;
+      };
+      frontmatter: {
+        title: string;
+      };
+    };
+    previousPost?: {
+      fields: {
+        slug: string;
+      };
+      frontmatter: {
+        title: string;
+      };
+    };
+  };
 }
 
-const BlogPost: React.FC<IBlogPostProps> = ({ data }) => {
+const BlogPost: React.FC<IBlogPostProps> = ({ data, pageContext }) => {
   const post = data.markdownRemark;
+  const next = pageContext.nextPost;
+  const previous = pageContext.previousPost;
 
   return (
     <Layout>
@@ -38,6 +59,7 @@ const BlogPost: React.FC<IBlogPostProps> = ({ data }) => {
       <S.MainContent>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </S.MainContent>
+      <RecommendedPosts next={next} previous={previous} />
     </Layout>
   );
 };
