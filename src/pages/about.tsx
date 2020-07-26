@@ -1,7 +1,7 @@
-import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/Layout"
-import SEO from "../components/seo"
+import React from 'react';
+import { Link } from 'gatsby';
+import Layout from '../components/Layout';
+import SEO from '../components/seo';
 
 // import { Container } from './styles';
 
@@ -15,7 +15,7 @@ const About: React.FC = () => {
           <a href="/about">About</a>
         </li>
         <li>
-          <Link to="/" activeStyle={{ color: "red" }}>
+          <Link to="/" activeStyle={{ color: 'red' }}>
             Home
           </Link>
         </li>
@@ -24,7 +24,7 @@ const About: React.FC = () => {
         </li>
       </ul>
     </Layout>
-  )
-}
+  );
+};
 
-export default About
+export default About;
