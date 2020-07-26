@@ -6,10 +6,14 @@ import SEO from '../../components/seo';
 
 import * as S from '../../components/Post/styles';
 import RecommendedPosts from '../../components/RecommendedPosts';
+import Comments from '../../components/Comments';
 
 interface IBlogPostProps {
   data: {
     markdownRemark: {
+      fields: {
+        slug: string;
+      };
       frontmatter: {
         background: string;
         category: string;
@@ -60,6 +64,7 @@ const BlogPost: React.FC<IBlogPostProps> = ({ data, pageContext }) => {
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </S.MainContent>
       <RecommendedPosts next={next} previous={previous} />
+      <Comments title={post.frontmatter.title} url={post.fields.slug} />
     </Layout>
   );
 };
@@ -67,6 +72,9 @@ const BlogPost: React.FC<IBlogPostProps> = ({ data, pageContext }) => {
 export const query = graphql`
   query FindPost($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
+      fields {
+        slug
+      }
       frontmatter {
         background
         category
