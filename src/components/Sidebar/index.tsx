@@ -1,9 +1,9 @@
-import React from "react"
-import Profile from "../Profile"
-import SocialLinks from "../SocialLinks"
+import React from 'react';
+import Profile from '../Profile';
+import SocialLinks from '../SocialLinks';
 
-import { Container } from "./styles"
-import MenuLinks from "../MenuLinks"
+import { Container } from './styles';
+import MenuLinks from '../MenuLinks';
 
 const Sidebar: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ const Sidebar: React.FC = () => {
       <SocialLinks />
       <MenuLinks />
     </Container>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;

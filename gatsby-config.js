@@ -45,7 +45,8 @@ module.exports = {
               linkImagesToOriginal: false
             }
           },
-          'gatsby-remark-lazy-load'
+          'gatsby-remark-lazy-load',
+          'gatsby-remark-prismjs',
         ],
       },
     },

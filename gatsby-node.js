@@ -56,7 +56,7 @@ exports.createPages = ({graphql, actions}) => {
       })
     })
 
-    const postPerPage = 1;
+    const postPerPage = 6;
     const numPages = Math.ceil(posts.length / postPerPage);
 
     Array.from({ length: numPages }).forEach((_, index) => {
