@@ -29,7 +29,7 @@ interface IPostList {
 const IndexPage: React.FC<PageProps> = () => {
   const { allMarkdownRemark } = useStaticQuery<IPostList>(graphql`
     query PostList {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { fields: frontmatter___date, order: DESC }) {
         nodes {
           frontmatter {
             background
